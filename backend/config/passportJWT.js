@@ -22,4 +22,21 @@ passport.use(
   })
 );
 
+const refreshTokenOptions = {
+  jwtFromRequest: (req) => req.cookies.jwt,
+  secretOrKey: process.env.REFRESH_TOKEN_SECRET,
+};
+
+passport.use(
+  "refresh-token",
+  new JWTStrategy(refreshTokenOptions, async (jwtPayload, done) => {
+    try {
+      const user = await UserService.findUserById(jwtPayload.id);
+      done(null, user);
+    } catch (error) {
+      done(error, null);
+    }
+  })
+);
+
 export default passport;

@@ -1,8 +1,8 @@
-# Welcome to the MERN Authentication Boilerplate
+# MERN Authentication Boilerplate
 
 ## Introduction
 
-Welcome to the MERN Authentication Boilerplate, a fully functional authentication setup built using the MERN stack. This project is designed to serve as a starting point for developers who want to integrate authentication seamlessly into their MERN applications.
+MERN Authentication Boilerplate, a fully functional authentication setup built using the MERN stack. This project is designed to serve as a starting point for developers who want to integrate authentication seamlessly into their MERN applications.
 
 ## Tech Stack
 

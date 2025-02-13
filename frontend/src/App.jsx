@@ -1,9 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
-import RequireAuth from "./components/RequireAuth";
-import Register from "./components/auth/Register";
-import Login from "./components/auth/Login";
-import Dashboard from "./components/Dashboard";
+import RequireAuth from "./features/auth/RequireAuth";
+import Register from "./features/auth/Register";
+import Login from "./features/auth/Login";
+import Dashboard from "./features/Dashboard";
 import Missing from "./components/Missing";
 
 function App() {

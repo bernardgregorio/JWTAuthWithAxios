@@ -20,7 +20,7 @@ class AuthController {
       const accessToken = jwt.sign(
         { id: user._id, username: user.username },
         process.env.ACCESS_TOKEN_SECRET,
-        { expiresIn: "1h" }
+        { expiresIn: "10s" }
       );
 
       const refreshToken = jwt.sign(
@@ -69,33 +69,14 @@ class AuthController {
   }
 
   async refreshToken(req, res, next) {
-    try {
-      const refreshToken = req.cookies.jwt;
-      if (!refreshToken) {
-        clearCookie("jwt", res);
-        throw createError("No token found", 400);
-      }
+    const user = req.user;
+    const accessToken = jwt.sign(
+      { id: user.id, username: user.username },
+      process.env.ACCESS_TOKEN_SECRET,
+      { expiresIn: "10s" }
+    );
 
-      await UserService.findUserByRefreshToken(refreshToken);
-
-      jwt.verify(
-        refreshToken,
-        process.env.REFRESH_TOKEN_SECRET,
-        (err, user) => {
-          if (err) throw createError("Invalid token", 401);
-
-          const accessToken = jwt.sign(
-            { id: user.id, username: user.username },
-            process.env.ACCESS_TOKEN_SECRET,
-            { expiresIn: "1h" }
-          );
-
-          res.status(200).json({ token: accessToken });
-        }
-      );
-    } catch (error) {
-      res.status(error.statusCode).json({ message: error.message });
-    }
+    res.status(200).json({ token: accessToken });
   }
 }
 

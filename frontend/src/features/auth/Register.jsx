@@ -124,7 +124,7 @@ const Register = () => {
 
   return (
     <main className="w-full min-h-screen flex flex-col items-center justify-center">
-      <img src="/images/bgcode.png" alt="" className="mb-8" />
+      <img src="/images/iskript.png" alt="" className="mb-8" />
       {success ? (
         <section className="w-90 min-h-60 border border-gray-300 p-3 bg-gray-100 rounded-md">
           <h1 className="text-2xl mb-4 font-bold text-center">

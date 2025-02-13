@@ -29,7 +29,7 @@ const Dashboard = () => {
       <header className="border-b border-gray-200 bg-gray-100">
         <nav className="flex flex-row items-center justify-center container mx-auto w-5xl p-2">
           <div className="grow p-2">
-            <img src="/images/bgcode.png" alt="" className="w-[100px]" />
+            <img src="/images/iskript.png" alt="" className="w-[100px]" />
           </div>
           <nav className="p-2">
             <a
@@ -37,23 +37,21 @@ const Dashboard = () => {
               onClick={handleLogout}
               className="flex items-center space-x-1"
             >
-              <LogoutIcon fontSize="small" />
               Logout
+              <LogoutIcon fontSize="small" className="ml-2" />
             </a>
           </nav>
         </nav>
       </header>
 
       <section className="container mx-auto w-5xl p-2">
-        <h1 className="text-4xl my-6">
-          Welcome to the MERN Authentication Boilerplate
-        </h1>
+        <h1 className="text-4xl my-6">MERN Authentication Boilerplate</h1>
         <h1 className="text-3xl my-3">Introduction</h1>
         <p className="my-3">
-          Welcome tothe MERN Authentication Boilerplate, a fully functional
-          authentication setup built using the MERN stack. This project is
-          designed to serve as a starting point for developers who want to
-          integrate authentication seamlessly into their MERN applications.
+          MERN Authentication Boilerplate, a fully functional authentication
+          setup built using the MERN stack. This project is designed to serve as
+          a starting point for developers who want to integrate authentication
+          seamlessly into their MERN applications.
         </p>
         <h1 className="text-3xl my-3">Tech Stack</h1>
         <p>This boilerplate leverages the following technologies:</p>
