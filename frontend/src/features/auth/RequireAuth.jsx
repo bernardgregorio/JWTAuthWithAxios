@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { Outlet, Navigate } from "react-router-dom";
-import useAuth from "../hooks/useAuth";
-import useRefreshToken from "../hooks/useRefreshToken";
-import useLocalStorage from "../hooks/useLocalStorage";
+import useAuth from "../../hooks/useAuth";
+import useRefreshToken from "../../hooks/useRefreshToken";
+import useLocalStorage from "../../hooks/useLocalStorage";
 
 const RequireAuth = () => {
   const { auth } = useAuth();

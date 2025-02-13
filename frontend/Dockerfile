@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 5173
 
 # Command to run the Node.js server
-CMD ["npm","run","dev"]
+CMD ["sh"]

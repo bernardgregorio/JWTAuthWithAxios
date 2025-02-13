@@ -68,7 +68,7 @@ const Login = () => {
 
   return (
     <main className="w-full min-h-screen flex flex-col justify-center items-center">
-      <img src="/images/bgcode.png" alt="" className="mb-8" />
+      <img src="/images/iskript.png" alt="" className="mb-8" />
       <section className="w-90 min-h-96 border border-gray-300 p-3 bg-gray-100 rounded-md">
         <p
           ref={errRef}
