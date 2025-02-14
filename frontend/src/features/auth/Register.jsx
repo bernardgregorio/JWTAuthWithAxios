@@ -142,7 +142,7 @@ const Register = () => {
           </Link>
         </section>
       ) : (
-        <section className="w-90 min-h-96 border border-gray-300 p-3 bg-gray-100 rounded-md">
+        <section className="w-90 min-h-96 border border-gray-200 p-3 bg-gray-100 rounded-md shadow-lg">
           <p
             ref={errRef}
             className={`bg-red-600 text-white text-sm p-2 my-2 rounded-md ${
